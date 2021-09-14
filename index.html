@@ -1,0 +1,565 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="eng"  xml:lang="eng">
+<head>
+  <title>8-Ball, The Online Oracle | 3kh0</title>
+  
+  <meta name="description" content="The Magic 8 Ball Oracle has answer to all the questions." />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Magic Eight Ball, Magic 8 Ball, 8 ball, internet oracle, online oracle">
+
+  <link rel="icon" sizes="192x192" href="8ball.png">
+  <link rel="shortcut icon" href="8ball.png" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="8ball.png" type="image/x-icon"/>
+
+  <style type="text/css">
+html, body {
+    font-family: arial;
+    font-size: 11px;
+    text-align: center;
+    background-color: #8E98A3;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: linear-gradient(180deg, rgba(50,58,66,1) 0px, rgba(96,111,126,1) 350px, rgba(96,111,126,1) 620px, rgba(142,152,163,1) 800px);
+}
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#wwrapper {
+    margin: auto;
+    width: 966px;
+}
+
+#wrapper {
+    height: auto;
+    min-height: 100%;
+    margin: auto;
+    text-align: left;
+    width: 930px;
+    background: linear-gradient(180deg, rgba(217,217,217,1) 0px, rgba(255,255,255,1) 82px, rgba(254,254,254,1) 340px, #d3d3d3 496px, rgba(154,154,154,1) 659px);
+    background-color: #999999;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: #e2e5e8 solid 5px;
+    border-left: #e2e5e8 solid 5px;
+    border-right: #e2e5e8 solid 5px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+
+#top {
+    height: 44px;
+    width: 908px;
+    margin: auto;
+    text-align: left;
+    background-color: #336699;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(180deg, rgba(68,133,184,1) 0%, rgba(61,110,158,1) 11%, rgba(85,127,170,1) 44%, rgba(51,102,153,1) 59%, rgba(48,95,143,1) 90%, rgba(59,119,164,1) 100%);
+    border: #666 solid 1px;
+    border-top: none;
+}
+
+#itop {
+    width:856px;
+    margin:auto;
+    color:white;
+    padding-top:12px;
+    font-size:14px;
+}
+
+#itop a {
+    color:white;
+    text-decoration:underline;
+}
+
+#itop a:hover {
+    color:#e0e0e0;
+}
+
+#itop .rights {
+    float:right;
+}
+
+#itop .rights a {
+    margin-left:6px;
+    margin-right:6px;
+}
+
+.idinput {
+    height:20px;
+    width:0px;
+    border-width:0px;
+    background-color:transparent;
+    display:none;
+}
+
+#logo {
+    height: 113px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    margin-top: 23px;
+}
+.logo {
+    font-size: 80px;
+    float: left;
+    text-shadow: 3px 3px 3px rgba(70,70,70,0.1);
+}
+
+.logo-black {
+    background: linear-gradient(180deg, rgba(113,113,113,1) 0%, rgba(90,90,90,1) 11%, rgba(107,107,107,1) 55%, rgba(62,62,62,1) 59%, rgba(55,55,55,1) 90%, rgba(79,79,79,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:700;
+}
+
+.logo-blue {
+    background: linear-gradient(180deg, rgba(68,133,184,1) 0%, rgba(61,110,158,1) 11%, rgba(85,127,170,1) 55%, rgba(51,102,153,1) 59%, rgba(48,95,143,1) 90%, rgba(59,119,164,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:300;
+}
+
+#q {
+    height: 39px;
+    width: 468px;
+    margin: auto;
+    text-align: left;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: #666 solid 1px;
+    width: 356px;
+    position: relative;
+    left: -56px;
+    box-shadow: inset 0px 5px 5px 1px rgba(0,0,0,0.05);
+}
+
+#q input {
+    height:30px;
+    width:338px;
+    border-width:0px;
+    font-family:arial;
+    font-size:20px;
+    color:#666666;
+    margin-top:5px;
+    margin-left:8px;
+    background-color:transparent;
+    position:absolute;
+}
+
+#q .qbutton {
+    height: 41px;
+    width: 100px;
+    border-width: 0px;
+    font-family: arial;
+    font-size: 20px;
+    color: white;
+    margin-top: 0px;
+    margin-left: 360px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    top: -1px;
+    background: linear-gradient(180deg, rgba(68,133,184,1) 0%, rgba(61,110,158,1) 11%, rgba(85,127,170,1) 44%, rgba(51,102,153,1) 59%, rgba(48,95,143,1) 90%, rgba(59,119,164,1) 100%);
+    border: #666 solid 1px;
+    border-radius: 8px;
+}
+
+#wanswer {
+    width: 708px;
+    margin: auto;
+    text-align: center;
+    margin-top: 27px;
+    color: #336699;
+    font-size: 20px;
+    padding-top: 14px;
+    border: #888 1px solid;
+    border-radius: 10px;
+    height: 33px;
+    margin-bottom: 33px;
+    background-color: #fff;
+}
+
+#answer {
+    position: relative;
+    z-index: 3;
+    top:-1px;
+}
+
+#arrow {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    transform: rotate(45deg);
+    border-bottom: #a0a0a0 1px solid;
+    border-right: #a0a0a0 1px solid;
+    margin-left: 450px;
+    margin-top: -48px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+#ball8 {
+    height: 360px;
+    width: 345px;
+    margin: auto;
+    text-align: left;
+    margin-top: -24px;
+    zoom: 0.75;
+}
+
+#links {
+    margin-top:50px;
+    text-align:center;
+    width:100%;
+    font-size:14px;
+    color:black;
+}
+
+
+#links a {
+    font-size:14px;
+    color:black;
+    margin-left:6px;
+    margin-right:6px;
+    text-decoration:underline;
+} 
+
+#links a:hover {
+    color:white;
+}
+
+#disclaimer {
+    margin: auto;
+    margin-top:20px;
+    text-align:justify;
+    width:856px;
+    font-size:11px;
+    color:white;
+    padding-bottom:35px;
+}
+
+#disclaimer a {
+    color:white;
+}
+
+#bottox {
+    width:100%;
+    height:16px;
+}
+
+#storyflow {
+    color: #000;
+    font-size:12px;
+}
+#storyflow a {
+    color: #000;
+    text-decoration:none;
+}
+#storyflow a:hover {
+    color: #336699;
+    text-decoration:none;
+}
+
+#storyflow img {
+    position:relative;top:3px;left:-4px;
+}
+#gads3-shell {
+    width: 728px;
+    height:50px;
+    overflow:none;
+    margin-left:100px;
+    position:relative;
+    top:12px;
+    z-index:10000;
+    text-align: center;
+    font-size: 14px;
+}
+#gads3-shell a {
+    color:black;
+}
+#gads3-shell a:hover {
+    color: #336699;
+}
+#qel {
+    outline: 0;
+}
+
+.ball, .mball {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #000000 100%);
+}
+.ball:before, .mball:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 40%);
+    border-radius: 50%;
+    bottom: 2.5%;
+    left: 5%;
+    opacity: 0.6;
+    height: 100%;
+    width: 90%;
+    -webkit-filter: blur(5px);
+    z-index: 2;
+}
+.ball:after, .mball:after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.7) 14%, rgba(255, 255, 255, 0) 24%);
+    -webkit-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    -moz-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    -ms-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    -o-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    -webkit-filter: blur(10px);
+}
+.ball .eight {
+    width: 110px;
+    height: 110px;
+    margin: 30%;
+    padding-bottom: 4px;
+    background: white;
+    border-radius: 50%;
+    -webkit-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg) rotate(-12deg);
+    -moz-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg) rotate(-12deg);
+    -ms-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg) rotate(-12deg);
+    -o-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg) rotate(-12deg);
+    transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg) rotate(-12deg);
+    position: absolute;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,242,185,1) 100%);
+}
+
+.ball .eight:before, .mball .meight:before {
+    content: "8";
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: 80px;
+    width: 100px;
+    left: 50px;
+    margin-left: -40px;
+    top: 44px;
+    margin-top: -40px;
+    color: black;
+    font-family: Arial;
+    font-size: 90px;
+    line-height: 104px;
+    font-weight:800;
+}
+
+.ball .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, 
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.1) 50%, 
+    rgba(0, 0, 0, 0.0) 60%);
+    -webkit-transform: rotateX(90deg) translateZ(-150px);
+    -moz-transform: rotateX(90deg) translateZ(-150px);
+    -ms-transform: rotateX(90deg) translateZ(-150px);
+    -o-transform: rotateX(90deg) translateZ(-150px);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+}
+.stage {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 20px;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    -o-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+}
+
+#mini-ball {
+    height: 160px;
+    width: 145px;
+    margin: auto;
+    text-align: left;
+    margin-top: -40px;
+    zoom: 0.35;
+    float: left;
+    margin-right: 190px;
+}
+
+.mball:after {
+    background: radial-gradient
+    (circle at 50% 50%,
+     rgba(255, 255, 255, .6),
+     rgba(255, 255, 255, 0.1) 54%,
+     rgba(255, 255, 255, 0) 84%);
+}
+.mball .meight {
+    width: 150px;
+    height: 150px;
+    margin: 30%;
+    background: white;
+    border-radius: 50%;
+    -webkit-transform: translateX(-15px) translateY(-50px);
+    -moz-transform: translateX(-15px) translateY(-50px);
+    -ms-transform: translateX(-15px) translateY(-50px);
+    -o-transform: translateX(-15px) translateY(-50px);
+    transform: translateX(-15px) translateY(-50px);
+    position: absolute;
+}
+
+.mball .meight:before {
+    margin-left: -25px;
+    top: 44px;
+    margin-top: -23px;
+    font-size: 130px;
+    line-height: 104px;
+}
+
+  </style>
+
+  <!--[if gte IE 7]>
+    <style type="text/css" media="all">
+        #q .qbutton {top:0px;}
+    </style>
+  <![endif]--> 
+  
+<script type="text/javascript">
+
+function oracleHandler(t) {
+    var qar = t.split('|');
+    document.getElementById('answer').innerHTML = qar[0];
+    document.getElementById('storyflow').innerHTML = '<a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.ask8ball.net%2Fqlist%2F' + qar[1] + '"><img src="https://activ-app-uploads.s3.eu-central-1.amazonaws.com/8ball/facebook_icon.png" />Share this prediction on Facebook!</a>' +
+    '<br /><a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.ask8ball.net&text=' + document.getElementById('qel').value + ' -- ' + qar[0] + ' @ask8ballnet"><img src="https://activ-app-uploads.s3.eu-central-1.amazonaws.com/8ball/twitter_icon.png" />Tweet this prediction!</a><br />';
+}
+
+function doOracle() {
+    var baseUrl = 'http://www.ask8ball.net';
+    e = document.getElementById('qel');
+    
+    if (e.value.trim() != '') {
+        var evalue = encodeURI(e.value.replace(/\\/g,""));
+        if (window.frames && window.frames.gads1) window.frames.gads1.location.href = baseUrl + '/ad.php?par1=7792087949&title=' + evalue;
+        if (window.frames && window.frames.gads2) window.frames.gads2.location.href = baseUrl + '/ad.php?par1=9268821141&title=' + evalue;
+        if (window.frames && window.frames.gads3) window.frames.gads3.location.href = baseUrl + '/ad.php?par1=5027256319&mode=line&title=' + evalue;
+        
+        document.getElementById('answer').innerHTML = 'Contacting Oracle..';
+
+        fetch('http://www.ask8ball.net/ajax/oracle/question/' + evalue).then(r => {
+            return r.text().then(t => oracleHandler(t))
+        });
+    } else {
+        document.getElementById('answer').innerHTML = 'You have to ask something';
+    }    
+}
+    
+function keyboardOracleCall(e) {
+    var keynum;
+    
+    if (window.event) {
+        keynum = e.keyCode; // IE
+    } else if (e.which) {
+        keynum = e.which; // Netscape/Firefox/Opera
+    }
+    if (keynum == 13) {
+        doOracle();
+    } else {
+        return String.fromCharCode(keynum);
+    }
+}
+
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4688208151111553",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+<body onload="document.getElementById('qel').focus()">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=384071565047484";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div style="position:absolute;top:50px;right:0px;z-index:10000;">
+    <iframe id="gads1" name="gads1" height="604" width="160" frameborder="text/html" style="border-width:0px;border-style:none;overflow:hidden;" src=""></iframe>
+</div>
+<div style="position:absolute;top:50px;left:0px;z-index:10000;">
+    <iframe id="gads2" name="gads2" height="604" width="160" frameborder="text/html" style="border-width:0px;border-style:none;overflow:hidden;" src=""></iframe>
+</div>
+
+<a name="top"></a>
+<div id="wwrapper">
+    <div id="wrapper">
+        <div id="logo">
+            <div class="logo logo-blue">
+                Ask
+            </div>
+            <div id="mini-ball">
+                <section class="stage">
+                  <figure class="mball">
+                    <span class="meight"></span>
+                  </figure>
+                </section>
+            </div>
+            <div class="logo logo-black">
+                Ball
+            </div>
+        </div>
+        <div id="q"><input type="text" id="qel" onkeypress="keyboardOracleCall(event);" /><input type="submit" class="qbutton" value="Ask" onclick="doOracle();"/></div>
+        <div id="gads3-shell">
+            <iframe id="gads3" name="gads3" height="50" width="728" frameborder="text/html" style="border-width:0px;border-style:none;overflow:hidden;" src=""></iframe>
+        </div>
+        <div id="wanswer"><div id="answer">Make your everyday decisions easier!</div></div>
+        <div id="arrow"></div>
+        <div id="storyflow" style="position:absolute;height:20px;margin-left:610px;top:370px;"></div>
+        <div id="ball8">
+            <section class="stage">
+              <figure class="ball">
+                <span class="shadow"></span>
+                <span class="eight"></span>
+              </figure>
+            </section>
+        </div>
+        <div id="disclaimer">This web page simulates the famous "Magic Eight Ball" toy, a registered trademark of Mattel Inc. The "Magic Eight Ball" trademark and various 8-Ball answers are used without permission of Mattel Inc. Mattel Inc. is neither affiliated with this site, nor with authors of this site. By using this oracle you agree that your doing so at your own risk. Authors will not be responsible for any choices based on advices from this oracle. Informations displayed within this site are not necessarily based on facts. Void where prohibited, taxed, or misconstrued. No children or animals were harmed in the process of construction of this oracle. <a href="/8ball">8ball</a>, 2021 &mdash; 3000</div>
+    </div>
+    <div id="bottox"></div>
+</div>
+  
+</body>
+</html>
